@@ -1,1 +1,17 @@
-
+submitApprove() {
+    if (this.crinitiatedFor == "") {
+      this.errorMessage = 'Enter Initiator';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      const inputElement = document.querySelector<HTMLInputElement>('input[ngModel="crinitiatedFor"]');
+      if (inputElement) {
+        inputElement.focus();
+      }
+    }
+    else if (this.plantId == "") {     
+      this.errorMessage = 'Select Plant';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      const selectElement = document.querySelector<HTMLSelectElement>('select[ngModel="plantId"]');
+      if (selectElement) {
+        selectElement.focus();
+      }
+    }
